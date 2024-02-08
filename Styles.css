@@ -1,0 +1,156 @@
+* { /*specify whole webpage*/
+    font-family: 'Open Sans', sans-serif; /*specify font*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*my basci format sattings*/
+}
+
+h1, h2, .poppins {  
+    font-family: 'Poppins', sans-serif; /*specify font*/
+}
+
+body { /*container for body*/
+    color: white; /*text color*/
+    gap: 42px; /*Gap between link boxes and header p*/
+    padding: 40px; /**/
+}
+
+.backgroundImg { /*Class = background img*/
+    position: fixed; /*reamin stationary on webpage*/
+    top: 0; /*ignores padding of page (fullscreen)*/
+    left: 0; /*ignores padding of page (fullscreen)*/
+    width: 100%; /*reamins full screen width*/
+    height: 100%; /*reamins full screen height*/
+    z-index: -2; /*-2 specifies background layer value*/
+}
+
+.backgroundImg img { /*image of class*/
+    width: 100%; /*reamins full screen width*/
+    height: 100%; /*reamins full screen height*/
+    object-fit: cover;  /*re-szies in ration of screen size*/
+}
+
+header {
+    text-align: center;  /*header text moves centre*/
+    gap: 14px;  /*gap between paragraph, h1 and h2*/
+}
+
+body, header, main, .backgroundImg {
+    display: flex;
+    flex-direction: column;
+}
+
+header img {
+    max-width: 180px;  /*max size px of profile pic*/
+    margin: 0px auto;  /*img 0px padding, AUTO = remains centre when page size changes*/
+    border-radius: 100%;  /*rounding of profile edges*/
+    border: 4px solid white;  /*4px border, solid line + color*/
+}
+
+header img:hover { /*specifies profile pic hover*/
+    border: 6px solid rgb(162, 80, 162); /*6px border, solid line + color*/
+    transition-duration: 200ms /*time for change of hover function*/
+}
+
+header mark { /*MARK = highlighted text of header section*/
+    border-radius: 4px; /*rounding of corners*/
+    padding: 2px 4px; /*padding of highlight around text*/
+    background-color: white; /*highlight color*/
+    color: black; /*text color*/
+    opacity: 0.6;
+}
+
+header mark:hover { /*specify hover over MARK(HIGHLIGHTED TEXT)*/
+    border-radius: 4px; /*rounding of corners*/
+    padding: 2px 4px; /*padding of highlight around text*/
+    background-color: rgb(162, 80, 162); /*highlight color*/
+    color: white; /*text color*/
+    transition-duration: 200ms; /*time for change of hover function*/
+    font-size: 1.2em;
+    font-weight: 500; /*specifies thickness of text*/
+    opacity: 1;
+}
+
+header h1 { /*specifies header 1 of header section*/
+    font-size: 1.5em; /*specifies size of text*/
+    font-weight: 400; /*specifies thickness of text*/
+}
+
+header h2 { /*specifies header 2 of header section*/
+    font-size: 1.5em; /*specifies size of text*/
+    font-weight: 400; /*specifies thickness of text*/
+}
+
+header p { /*specifies paragraph of header section*/
+    font-size: 0.9em; /*specifies size of text*/
+    font-weight: 700; /*specifies thickness of text*/
+}
+
+main {
+    gap: 14px; /*specifies gap between main section / specifically link boxes*/
+}
+
+.link { /*class created for link boxes*/
+    position: relative; /*esential for proportionality*/
+    display: flex; /*formats items in a = ANCHOR into row (default is column)*/
+    justify-content: space-between; /*specifies spread between text and icon*/
+    padding: 8px 14px; /*(Vert-Horiz) specifies spacing around text and icon from boundry of container*/
+    border: 2px solid white; /*2px border, solid line + color*/
+    border-radius: 8px; /*rounding of corners*/
+    width: 420px; /*px width of link boxes*/
+    margin: 0 auto; /*0px vertical gap + AUTO remains center in page*/
+    transition-duration: 200ms; /*time for change of hover function*/
+    cursor: pointer; /*on hover cursor turns to pointer*/
+    overflow: hidden; /*hides overflow of class backgroundimg behind border*/
+    color: white; /*text color*/
+    text-decoration: unset; /*removes underline of link text*/
+}
+
+.link:hover { /*hover properties of link class*/
+    border-color: rgb(162, 80, 162); /*border color change when hover*/
+    color: rgb(162, 80, 162); /*text and icon color change when hover*/
+    font-size: 1.5em; /*specifies size of text*/
+    font-weight: 600; /*specifies thickness of text*/
+    text-decoration: unset; /*removes underline of link text*/
+    
+}
+
+.linkBackground { /*class for background colour of link box*/
+    position: absolute; /*essential */
+    inset: 0; /*essential*/
+    background: black; /*color of background*/
+    opacity: 0.4;
+}
+
+.linkBackground:hover { /*class for background colour of link box hover properties*/
+    background: white;
+    opacity: 0.4;
+}
+
+.link p {
+    font-size: 0.8em; /*specifies size of text*/
+    font-weight: 600; /*specifies thickness of text*/
+}
+
+@media (min-width: 640px){ /*when scaling page size, when screen less than px, below properties take effect*/
+    body {
+        gap: 64px;
+        padding: 80px, 14px;
+    }
+
+    header h1 {
+        font-size: 1.7em; /*specifies size of text*/
+        font-weight: 500; /*specifies thickness of text*/
+    }
+
+    header h2 {
+        font-size: 1.7em; /*specifies size of text*/
+        font-weight: 500; /*specifies thickness of text*/
+    }
+
+    header p {
+        font-size: 1.1em; /*specifies size of text*/
+        font-weight: 700; /*specifies thickness of text*/
+    }
+}
