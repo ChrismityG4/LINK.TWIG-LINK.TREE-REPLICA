@@ -133,24 +133,13 @@ main {
     font-weight: 600; /*specifies thickness of text*/
 }
 
-@media (min-width: 640px){ /*when scaling page size, when screen less than px, below properties take effect*/
+@media (max-width: 500px){ /*when scaling page size, when screen less than px, below properties take effect*/
     body {
         gap: 64px;
         padding: 80px, 14px;
     }
-
-    header h1 {
-        font-size: 1.7em; /*specifies size of text*/
-        font-weight: 500; /*specifies thickness of text*/
+    .link {
+        width: 220px;
     }
-
-    header h2 {
-        font-size: 1.7em; /*specifies size of text*/
-        font-weight: 500; /*specifies thickness of text*/
-    }
-
-    header p {
-        font-size: 1.1em; /*specifies size of text*/
-        font-weight: 700; /*specifies thickness of text*/
-    }
+   
 }
